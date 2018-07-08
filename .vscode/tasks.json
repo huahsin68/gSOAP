@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-o", "main",
+                "main.cpp soapC.cpp soapHuahsinServiceBindingPortProxy.cpp /home/kokhoe/tool/gsoap-2.8.68/gsoap/stdsoap2.cpp",
+                "-I/home/kokhoe/tool/gsoap-2.8.68/gsoap",
+                "-I.",
+                "-std=c++11"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
